@@ -1,5 +1,5 @@
 #include <DSound.h>
-#include <dxerr.h>
+
 #include "CDirectSound.h"
 
 
@@ -53,6 +53,7 @@ CDirectSound::~CDirectSound()
 
 BOOL CDirectSound::Create(LPCTSTR pszResource, HWND pWnd)
 {
+	Mp3 = false;
 	//////////////////////////////////////////////////////////////////
 	// load resource
 	HINSTANCE hApp = ::GetModuleHandle(0);

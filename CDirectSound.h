@@ -17,6 +17,7 @@
 #include <ctime>
 #include <thread>
 #include <mutex>
+#include <cstring>
 
 #pragma message("linking with Microsoft's DirectSound library ...")
 #pragma comment(lib, "dsound.lib")
@@ -53,6 +54,8 @@ public:  // construction/destruction
 	BOOL Create(LPCTSTR pszResource, HWND pWnd = 0);
 	BOOL Create(UINT uResourceID, HWND pWnd = 0) {
 		Mp3 = false;
+		//std::string str = std::to_string(uResourceID);
+		//MessageBox(NULL, str.c_str(), "debug", MB_OK);
 		return Create(MAKEINTRESOURCE(uResourceID), pWnd);
 	}
 	// Alternativly you can specify the sound by yourself

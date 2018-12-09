@@ -39,11 +39,15 @@
 //#pragma comment(lib,"dxerr.lib")
 #pragma comment(lib, "legacy_stdio_definitions.lib")
 
+#define DColor(A) D2D1::ColorF( D2D1::ColorF::A )
+
+
 
 typedef ID2D1Bitmap D2DBitMap;
 typedef IDWriteTextFormat TextFormat;
 
 typedef D2D1_SIZE_U BMPRect;
+
 
 struct RECT_F {
 	float left;
